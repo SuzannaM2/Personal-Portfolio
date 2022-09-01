@@ -5,27 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My info</title>
+    <link rel ="stylesheet" href = "css/index.css" />
 </head>
 
 <body>
     <main>
         <section>
-            <h1>About Me:</h1>
-            <p>Hello, my name is <em>Suzanna Mamatkulava</em></p>
-            <p>Nice to see you there!👋
-                I am excited to become frond-end developer . Right now i am learning javaScript! 
-                    <br>My current career is designer at bakeshop, and even tho it's so much fun i am exciting to learn smth greater!
-                    <br>Also I'm a cat person and have one named Christopher!
-            </p>   
+            <section id="connect">
+                <a href = "https://www.instagram.com/freeze_the_moment24/" >
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href ="https://github.com/SuzannaM2">
+                    <ion-icon name="logo-github"></ion-icon> 
+                </a>
+                <a href="https://www.linkedin.com/feed/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </section>
+            <h1 id="name">Suzanna Mamatkulava</h1>
+            <p id="title"><em>Entry-Level Web Developer</em></p>
+            <p id="introText">Software engineer with ability to learn and collaborate in rapidly changing enviroments and 
+                compositions.I am exited to continue my career by joining a company composed  of driven professionals who value creative problem solving. 
+                <br>My past career is designer at bakeshop, so i'm eager to build creative projects!</p>
+            
+            <img class="image" src = "img/me.png" />  
         </section>
 
         <section>
-            <h1>Experience</h1>
+            <h1 id ="work">Work Experience</h1>
             <p>
-                <ul> 
-                    <li>manager at the restaurant from 2018-2021</li>
-                    <li>designer at bakeshop from 2021-now</li>
-                    <li>And this is my first project 🥳 </li>
+                <ul id="workList"> 
+                    <li>Manager at the restaurant from Lune, 2018 - May, 2021</li>
+                    <li>Assistant of manager/fruit expert at Edible Arrangments from June, 2021-now</li>
+                    <li>And this is my first project  </li>
                 </ul>
             </p>
         </section>
@@ -33,44 +47,41 @@
     </main>
 
      <section id = "skills">
-            <h2>Skills</h2>
-            <ul></ul>
+            <h2 id = "mySkills">Skills</h2>
+            <ul id ="skillsList"></ul>
     </section>
 
-    <section>
-            <h1>Connect</h1>
-            <p> Find me on:
-                <ul>
-                    <li>https://github.com/SuzannaM2</li>
-                    <li>https://www.instagram.com/freeze_the_moment24/</li>
-                </ul>
-            </p>   
+    <section id = "education">
+        <h2 id = "ed">Education</h2>
+        <ul id="educationList"></ul>
     </section>
-
 
     <section > 
-        <h2> Leave a message</h2>
-        <form name = "leave_message" >
-            <label for ="name"> Name: </label> <br>
-            <input type = "name" id = "name" name = "name"  required= "true"> <br>
+        <h2 id ="leaveMessage"> Leave a message to get in touch !</h2>
+        <form name = "leave_message" id="messageForm" >
+            <label for ="name" id ="labelName"> Name: </label> <br>
+            <input type = "text" id ="name" name ="name"  required="true"> <br>
 
-            <label for = "email">Email: </label> <br>
-            <input type = "email" id = "email" name = "email" required=""true"><br>
+            <label for = "email" id="labelEmail" >Email: </label> <br>
+            <input type ="email" id ="email" name ="email" required="true"><br>
 
-            <label for ="message">Ask me :</label> <br>
-            <textarea name = "message" id = "message" required = "true"> </textarea> <br>
-            <button type = "submit" name = "submit" value = "submit">Submit</button>
+            <label for ="message" id="labelMessage">Ask me :</label> <br>
+            <textarea name ="message" id ="message" required ="true"> </textarea> <br>
+            <button type = "submit" id = "buttonType" name = "submit" value = "submit">Submit</button>
         </form>
     </section>
 
     <section id = "messages"> 
         <h2>Messages</h2>
-        <ul>
+        <ul id ='messagesList'>
         </ul>
         
     </section>
-    <footer id = "footer"> </footer>
+    <footer id = "footer"> 
+    </footer>
     <script src = 'js/index.js'>   </script>
+
+   
 
 </body>
 </html>

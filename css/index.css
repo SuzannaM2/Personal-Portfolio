@@ -1,0 +1,187 @@
+* {
+    background-color: #fff0f5;
+}
+#name {
+    padding-left: 3%;
+    font-size:200%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+
+}
+p {
+    text-align: justify;
+}
+#introText{
+    font-size:120%;
+    width: 60%;
+    text-align: centers;
+    margin-left: 3%;
+}
+.image {
+    width: 20%;
+    height: 30%;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+  
+#title {
+    font:italic small-caps 18px/2 bold cursive;
+    font-size:170%;
+    color: rgb(123, 95, 188);
+    margin-top: 0%;
+    padding-left: 10%;
+}
+#ed {
+    font-size:200%;
+    color:blueviolet;
+    padding-left: 3%;
+}
+
+
+#mySkills {
+    font-size:200%;
+    color:blueviolet;
+    padding-left: 3%;
+}
+#skillsList {
+    list-style-type:square;
+    padding-left: 7%;
+}
+#educationList  {
+    list-style-type: upper-roman;
+    padding-left: 7%;
+}
+#workList {
+    list-style-type:decimal;
+    padding-left: 7%;
+}
+
+#work {
+    font-size:200%;
+    color:blueviolet;
+    padding-left: 3%;
+}
+
+#leaveMessage {
+    font-size:2rem;
+    color:blueviolet;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+h1 #name {
+    font-size: 20px;
+}
+
+footer {
+    padding-left: 50%;
+    color: rgb(83, 180, 180);
+}
+ 
+#buttonType{
+    font-size:1rem ;
+    background-color:rgb(212, 186, 236);
+    padding: 10px 24px;
+    border-radius: 60%;
+    border: 3px solid rgb(65, 13, 114);
+}
+
+#button:hover {
+    background-color: aqua;
+    color: red;
+}
+
+
+
+/*???? border for leave a message*/
+#messageForm {
+    padding-left: 10%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    font-size: 1.5rem;
+    border-style: double;
+    border-width: 5px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border-radius: 50px;
+    border-left-width: 15px;
+    border
+    border-right-width: 15px;
+}
+
+#messages {
+    font-size:150%;
+    padding-left: 3%;
+    color:blueviolet;
+}
+
+#messagesList {
+    font-size: 1rem;
+    color: black;
+    list-style-type:circle;
+}
+footer {
+    text-align: center;
+}
+form #name {
+    background-color: rgb(243, 202, 237);
+    width: 13%;
+    height: 30px;
+    border-radius: 10%;
+    border: 2px solid purple;
+    font-size: 1rem;
+    margin-bottom: 3%;
+}
+form #email {
+    background-color: rgb(243, 202, 237);
+    width: 15%;
+    border-radius: 10%;
+    border: 2px solid purple;
+    font-size: 1rem;
+    margin-bottom: 3%;
+
+}
+
+form #message {
+    background-color: rgb(243, 202, 237);
+    width: 30%;
+    height: 30px;
+    border-radius: 10%;
+    border: 2px solid purple;
+    font-size: 1rem;
+    margin-bottom: 1%;
+}
+a:visited{
+    color:rgb(199, 244, 103);
+}
+#connect {
+
+}
+form #labelName{
+    color:rgb(44, 62, 226);
+}
+form #labelEmail{
+    color:rgb(44, 62, 226);
+}
+form #labelMessage {
+    color:rgb(44, 62, 226);
+}
+#connect {
+    font-size: 2rem;
+    margin-left: 90%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+@media only scren and (min-width:601px) {
+    div.example {
+        font-size:80px;
+    }
+}
+@media only scren and (max-width:600px) {
+    div.example {
+        font-size:30px;
+    }
+}
