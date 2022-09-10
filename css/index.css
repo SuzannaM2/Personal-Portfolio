@@ -1,0 +1,273 @@
+body {
+    background-color: #fff0f5;
+    margin: auto;
+    width: 1000px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+/*all h2 */
+h2{
+    font-size: 200%;
+    color:blueviolet;
+    margin-bottom: 50px;
+}
+.social-icon {
+    color: rgb(60, 34, 124);
+    text-decoration: none;
+    padding: 0px 10px;
+
+}
+.social-icon:hover {
+    color:rgba(132, 45, 214, 0.662);
+    transition: color 0.2s;
+}
+#name {
+    font-size:200%;
+    margin-bottom: 0%;
+    margin-top: 50px;
+    color:black;
+
+}
+#introText{
+    font-size:120%;
+    text-align: left;
+    margin: 30px 250px 0px 0px;
+    border: 3px solid rgb(198, 228, 241) ;
+    padding: 10px;
+}
+.image {
+    width: 10%;
+    height: 16%;
+    border-radius: 50%;
+    position: absolute;
+    top: 8%;
+    right: 20%;
+  }
+  
+#title {
+    font:italic small-caps bold cursive;
+    font-size:170%;
+    color: rgb(170, 139, 241);
+    margin: 1% 4% 3%;
+}
+
+section {
+    min-height: 10vh;
+    padding: 10px 15px 20px 25px;
+}
+#skillsList {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+#skillsList li {
+    padding:15px 40px;
+    text-align: center;
+    border-bottom: 3px solid blue;
+    background-color: blanchedalmond;
+    font-weight: bold;
+}
+
+#educationList {
+    font-size: 1.2rem;
+    list-style-type:circle;
+    display: flex;
+    flex-direction: column;
+}
+#educationList li {
+    padding: 15px;
+}
+#primaryWork {
+    display: flex;
+    flex-direction: row;
+    list-style-type:none;
+    justify-content: space-between;
+    margin-left: -35px;
+}
+#primaryWork li{
+    font-size: 1.2rem;
+    padding: 10px ;
+    flex-grow: 1;
+    margin: 0px 10px;
+    text-align: center;
+    background-color:  rgb(214, 212, 242) ;
+}
+#projectsList{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+#projectsList li {
+    padding: 0px 0px 15px 0px;
+}
+#leaveMessage {
+    font-size:2rem;
+    color:black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+ /*button */
+#buttonType{
+    font-size:1rem ;
+    background-color:rgb(212, 186, 236);
+    padding: 5px 10px ;
+    border-radius: 50%;
+    border: 3px solid rgb(65, 13, 114);
+    display: flex;
+    flex-direction: row;
+}
+
+/*border for leave a message*/
+#messageForm {
+    padding: 30px 60px ;
+    margin: 30px 10px;
+    font-size: 1.5rem;
+    border-style: double;
+    border-width: 5px;
+    border-radius: 50px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+   
+}
+
+#messages {
+    font-size:100%;
+    padding-left: 3%;
+    color:blueviolet;
+}
+
+#messagesList {
+    font-size: 1.1rem;
+    color: black;
+    list-style-type:circle;
+}
+
+button {
+    color:rgb(27, 73, 73);
+    border-radius: 70%;
+    background-color:rgb(212, 186, 236);
+    padding: 5px 10px ;
+    border-radius: 50%;
+    border: 3px solid rgb(65, 13, 114);
+}
+form #name, #email{
+    background-color: rgb(243, 202, 237);
+    width: 250px;
+    height: 50px;
+    border-radius: 10%;
+    border: 2px solid purple;
+    font-size: 1.5rem;
+    color:black;
+    margin:5px 60px 25px 0px;
+}
+form #message {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(243, 202, 237);
+    width: 700px;
+    height: 70px;
+    border-radius: 10%;
+    border: 2px solid purple;
+    font-size: 1.5rem;
+    color:black;
+    margin:5px 0px 25px 0px;
+}
+form #labelName, #labelEmail, #labelMessage{
+    color:rgb(44, 62, 226);
+    font-size: 1.3rem;
+}
+
+#connect {
+    font-size: 2rem;
+    width: 500px;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    z-index: 90;
+    margin: -70px 0px 0px 830px;
+}
+
+footer {
+    text-align: center;
+    width: 250px;
+    border-bottom: 5px solid rgb(206, 178, 200);
+    margin: 50px auto 50px;
+    color: rgb(83, 180, 180);
+
+}
+.main-header {
+    height: 10px;
+    color: rgb(166, 187, 241);
+    width: 100%;
+    height: 80px;
+}
+
+.main-nav li{
+    list-style-type: none;
+    padding: 0px 35px 10px 0px;
+}
+
+.main-nav{
+    display: flex;
+    position: fixed;
+    flex-direction:row;
+    background-color: rgb(239, 187, 230);
+    margin: auto;
+    height: 60px;
+    width: 1000px;
+    align-items: flex-end;
+    z-index: 90;
+    
+    
+}
+/*Media Queries */
+
+@media print {
+    section {
+        min-height: auto;
+    }
+}
+/*
+@media screen and (min-width:700px) {
+    .image {
+        width: 20%;
+        height: 30%;
+        top: 10%;
+        right: 10%;  
+    }
+    #name {
+        margin-top: -25px;
+    }
+    form #labelName, #labelEmail, #labelMessage {
+        font-size:1.5rem;
+    }
+    #skillsList li {
+        font-size: 1.3rem;
+        display: inline-block;
+        width: 25%;
+        padding: 15px 0px;
+        margin: 5px 3% 5px 0;
+    }
+    .main-header, .main-nav, #workList{
+    display:flex;
+    padding: 20px;
+    }    
+    .primaryWork {
+        flex-grow:1;
+        justify-content: space-around;
+    }  
+    .main-header{
+        padding-top: 0px;
+        position: fixed;
+        list-style-type: none;
+        justify-content: space-around;
+    }
+}
+*/
