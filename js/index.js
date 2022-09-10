@@ -48,7 +48,7 @@ messageForm.addEventListener ('submit', (e) => {
 
     newMessage.innerHTML = 
         `<div>
-        <a class="link" href="mailto: ${email}"> ${name} </a> asking: 
+        <a class="link" href="mailto:${email}"> ${name} </a> asking: 
         <span class="strong"> ${message} </span> <p>${now}</p>
         </div>`
 
@@ -75,8 +75,30 @@ messageList.prepend(newMessage);
 e.target.reset();
 });
 
+const githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/SuzannaM2/repos');
+githubRequest.send();
+// Fetch API 
+fetch ('https://api.github.com/users/SuzannaM2/repos')
+    .then (response => response.json() )
+    .then (githubRequest.addEventListener('load', function() {
+        const repositories = JSON.parse(githubRequest.responseText);
+        console.log(repositories);
+        const projectSection = document.getElementById("projects");
+        const projectList = projectSection.querySelector ("ul");
 
-/* creating XMLHttpRequest */
+        for (let i=0; i<repositories.length; i++) {
+            const project= document.createElement ('li');
+            const repLink=document.createElement('a');
+            repLink.href=repositories[i].html_url;
+            repLink.innerHTML = repositories[i].name;
+            project.appendChild(repLink);
+            projectList.appendChild(project);
+        } }));
+
+
+/*    
+creating XMLHttpRequest 
 
 const githubRequest = new XMLHttpRequest();
 githubRequest.open('GET', 'https://api.github.com/users/SuzannaM2/repos');
@@ -85,16 +107,16 @@ githubRequest.onreadystatechange = function() {
     if (githubRequest.readyState === 4 ) {
         const repositories = JSON.parse(githubRequest.responseText);
         console.log(repositories);
-        const projectSection=document.getElementById("projects");
+        const projectSection = document.getElementById("projects");
         const projectList = projectSection.querySelector ("ul");
         for (let i=0; i<repositories.length; i++) {
             const project= document.createElement ('li');
-            const repoLink=document.createElement('a');
-            repoLink.href=repositories[i].html_url;
-            repoLink.innerHTML = repositories[i].name;
+            const repLink=document.createElement('a');
+            repLink.href=repositories[i].html_url;
+            repLink.innerHTML = repositories[i].name;
+            project.appendChild(repLink);
             projectList.appendChild(project);
-            project.appendChild(repoLink)
-
         }
     }
 }
+*/
