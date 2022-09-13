@@ -26,14 +26,8 @@ for (let i = 0; i < education.length; ++i){
     educationList.appendChild(study);
 };
 
-function hide () {
-    if (messageList.childElementCount == 0) {
-        messageSection.style.display= "none";
-    } else {
-        messageSection.style.display= "block";
-    }
-}
-
+const messageSection = document.getElementById('messages');
+messageSection.hidden = true;
 let messageForm = document.getElementsByName('leave_message')[0];
 messageForm.addEventListener ('submit', (e) => {
     e.preventDefault();
@@ -42,7 +36,6 @@ messageForm.addEventListener ('submit', (e) => {
     let message = e.target.message.value;
     console.log(name, email, message);
     const now = new Date()
-    const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
 
@@ -51,9 +44,8 @@ messageForm.addEventListener ('submit', (e) => {
         <a class="link" href="mailto:${email}"> ${name} </a> asking: 
         <span class="strong"> ${message} </span> <p>${now}</p>
         </div>`
-
     messageList.appendChild(newMessage);
-
+    
     //remove button
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove'; 
@@ -63,38 +55,37 @@ messageForm.addEventListener ('submit', (e) => {
     removeButton.addEventListener('click', (event) => {
         const entry = event.target.parentNode
         const entryList = entry.parentNode
-
-        if (entryList.children.length <= 0) {
+      if (entryList.children.length <= 1) {
         messageSection.style.display = 'none'
           }
         entry.remove()
     });
-
-newMessage.appendChild(removeButton);
-messageList.prepend(newMessage);  
-e.target.reset();
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage); 
+    e.target.reset();
+    messageSection.hidden = false;
+    messageForm.items[0].reset();
+    
 });
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/SuzannaM2/repos');
-githubRequest.send();
 // Fetch API 
 fetch ('https://api.github.com/users/SuzannaM2/repos')
     .then (response => response.json() )
-    .then (githubRequest.addEventListener('load', function() {
-        const repositories = JSON.parse(githubRequest.responseText);
-        console.log(repositories);
-        const projectSection = document.getElementById("projects");
+    .then (data => {
+        console.log (data)
+        const projectSection=document.getElementById("projects");
         const projectList = projectSection.querySelector ("ul");
-
-        for (let i=0; i<repositories.length; i++) {
+        for (let i =0 ; i < data.length; i++) {
             const project= document.createElement ('li');
-            const repLink=document.createElement('a');
-            repLink.href=repositories[i].html_url;
-            repLink.innerHTML = repositories[i].name;
-            project.appendChild(repLink);
+            const repoLink=document.createElement('a');
+            repoLink.href=data[i].html_url;
+            repoLink.innerHTML = data[i].name;
             projectList.appendChild(project);
-        } }));
+            project.appendChild(repoLink)
+
+        }
+    })
+
 
 
 /*    

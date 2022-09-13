@@ -38,7 +38,6 @@ h2{
 .image {
     width: 10%;
     height: 16%;
-    border-radius: 50%;
     position: absolute;
     top: 8%;
     right: 20%;
@@ -59,7 +58,8 @@ section {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: flex-start;    
+    margin-left: -25px;
 }
 #skillsList li {
     padding:15px 40px;
@@ -67,6 +67,7 @@ section {
     border-bottom: 3px solid blue;
     background-color: blanchedalmond;
     font-weight: bold;
+    margin-right: 30px;
 }
 
 #educationList {
@@ -88,11 +89,11 @@ section {
 #primaryWork li{
     font-size: 1.2rem;
     padding: 10px ;
-    flex-grow: 1;
-    margin: 0px 10px;
+    margin-left: 10px;
     text-align: center;
-    background-color:  rgb(214, 212, 242) ;
+    background-color:  rgb(214, 212, 242);
 }
+
 #projectsList{
     font-size: 1.2rem;
     display: flex;
@@ -110,8 +111,6 @@ section {
     flex-direction: column;
     
 }
-
-
 
  /*button */
 #buttonType{
@@ -134,7 +133,6 @@ section {
     border-radius: 50px;
     border-left-width: 15px;
     border-right-width: 15px;
-   
 }
 
 #messages {
@@ -186,10 +184,9 @@ form #labelName, #labelEmail, #labelMessage{
 
 #connect {
     font-size: 2rem;
-    width: 500px;
     display: flex;
     position: fixed;
-    flex-direction: row;
+    flex-direction:row;
     z-index: 90;
     margin: -70px 0px 0px 830px;
 }
@@ -203,9 +200,7 @@ footer {
 
 }
 .main-header {
-    height: 10px;
     color: rgb(166, 187, 241);
-    width: 100%;
     height: 80px;
 }
 
@@ -224,8 +219,6 @@ footer {
     width: 1000px;
     align-items: flex-end;
     z-index: 90;
-    
-    
 }
 /*Media Queries */
 
@@ -234,40 +227,95 @@ footer {
         min-height: auto;
     }
 }
-/*
-@media screen and (min-width:700px) {
-    .image {
-        width: 20%;
-        height: 30%;
-        top: 10%;
-        right: 10%;  
+
+@media screen and (max-width:1000px) {
+    body {
+        width: 100%;
     }
-    #name {
-        margin-top: -25px;
+    #primaryWork {
+        flex-direction: column;
     }
-    form #labelName, #labelEmail, #labelMessage {
-        font-size:1.5rem;
+    #primaryWork li {
+        margin-bottom: 15px;
+    }
+    #skillsList {
+        display: inline-block;
     }
     #skillsList li {
-        font-size: 1.3rem;
-        display: inline-block;
-        width: 25%;
-        padding: 15px 0px;
-        margin: 5px 3% 5px 0;
+        margin-bottom: 15px;
     }
-    .main-header, .main-nav, #workList{
-    display:flex;
-    padding: 20px;
-    }    
-    .primaryWork {
-        flex-grow:1;
-        justify-content: space-around;
-    }  
-    .main-header{
-        padding-top: 0px;
-        position: fixed;
-        list-style-type: none;
-        justify-content: space-around;
+    form #message, form #name, form #email{
+        display: inline-block;
+        width: 100%;
+    }
+
+    #leaveMessage {
+        font-size: 1.5rem;
+    } 
+    #introText {
+        width: 90%;
+    }
+    footer {
+        width: 100%;
+    }
+    .image{
+        width: 17%;
+        height: 16%;
+        position: absolute;
+        top: 10%;
+        right: 8%;
+    }
+    .main-nav li {
+        margin-left: -10px;
+        font-size: 0.9rem;
+    }
+    .main-nav {
+        height: 45px;
+    }
+    #connect {
+        font-size: 1.4rem;
+        margin:-70px 70%;
     }
 }
-*/
+@media screen and (max-width:525px) {
+    .image {
+        width: 30%;
+        height: 16%;
+        top: 5%;
+        right: 40%;
+    }
+    #connect {
+        position: relative;
+        flex-direction: column;
+        margin-top: 1% ;
+        margin-left: 65%;
+    }
+    .image {
+        width: 40%;
+        height: 16%;
+        top:8%;
+    }
+    .main-nav {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60px;
+    }
+    #name {
+        font-size: 1.4rem;
+        margin-top: 40%;
+    }
+    #title {
+        font-size: 1.2rem;
+    }
+    body{
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 170%;
+    }
+    #messageForm {
+        border-style: none;
+        margin-left: -15%;
+        margin-top: -10%;
+    }
+}
